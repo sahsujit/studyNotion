@@ -10,6 +10,7 @@ const {
   paymentSuccessEmail,
 } = require("../mail/templates/paymentSuccessEmail");
 // const endpointSecret = process.env.ENDPOINT_SECRET
+
 const stripe = require("stripe")(
   process.env.STRIPE_SECRET_KEY
 );
@@ -71,7 +72,7 @@ async function capturePayment(req, res) {
         },
       ],
 
-      success_url:`http://localhost:3000/checkout-completed?session_id={CHECKOUT_SESSION_ID}`,
+      success_url:`https://studynotion-server-vdjq.onrender.com/checkout-completed?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: process.env.FRONTEND_URL,
       metadata: {
         userId: userId,
