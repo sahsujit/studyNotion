@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4000/api/v1"
+const BASE_URL = "https://studynotion-server-vdjq.onrender.com/api/v1"
 // const BASE_URL ="https://studynotion-server-two.vercel.app/"
 
 // AUTH ENDPOINTS
